@@ -1388,11 +1388,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+                android_arm: {
+			srcs: ["proprietary/system/lib/libaptX_encoder.so"],
+		},
 		android_arm64: {
-			srcs: ["proprietary/product/lib64/libaptX_encoder.so"],
+			srcs: ["proprietary/system/lib64/libaptX_encoder.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	product_specific: true,
